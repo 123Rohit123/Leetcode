@@ -1,13 +1,13 @@
 class Solution(object):
-    def isSubsequence(self, s, t):
+    def isSubsequence(self,s,t):
         if s == '': return True
         if len(s) > len(t) : return False
 
-        i = 0
-        for j in range(len(t)):
-            if t[j] == s[i]:
-                if i == len(s)-1:
+        pointer1 = 0
+        for pointer2 in range(len(t)):
+            if t[pointer2]== s[pointer1]:
+                if pointer1 == len(s)-1:
                     return True
                 else:
-                    i += 1
+                    pointer1 += 1
         return False
