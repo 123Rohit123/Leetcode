@@ -1,7 +1,8 @@
 class Solution(object):
     def isSubsequence(self, s, t):
-        if s == "": return True
-        if len(s) > len(t): return False
+        if s == '': return True
+        if len(s) > len(t) : return False
+
         i = 0
         for j in range(len(t)):
             if t[j] == s[i]:
