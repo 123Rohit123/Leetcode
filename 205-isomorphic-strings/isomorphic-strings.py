@@ -1,14 +1,11 @@
 class Solution(object):
     def isIsomorphic(self, s, t):
-        if len(s) != len(t):
-            return False
-        h1 ={}
-        h2 ={}
-        for i,j in zip(s,t):
-            if (i in h1 and h1[i] != j) or (j in h2 and h2[j] != i):
+        h1 = {}
+        h2 = {}
+
+        for char1, char2 in zip(s,t):
+            if (char1 in h1 and h1[char1] != char2) or (char2 in h2 and h2[char2] != char1):
                 return False
-            h1[i] = j
-            h2[j] = i
-        return True            
-
-
+            h1[char1] = char2
+            h2[char2] = char1
+        return True
